@@ -24,6 +24,7 @@ mybatis:
   typeAliasesPackage: com.example.demo.vo
   configuration: 
     logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapUnderscoreToCamelCase: true
     
 #logging:
 #  level:
