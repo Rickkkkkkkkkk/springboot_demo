@@ -20,7 +20,12 @@ spring:
     maxOpenPreparedStatements: 20
     
 mybatis:
-   mapperLocations: classpath:mybatis/*Mapper.xml
-   typeAliasesPackage: com.example.demo.vo
-   configLocation: classpath:/mybatis/config/spring-mybatis.xml
+  mapperLocations: classpath:mybatis/*Mapper.xml
+  typeAliasesPackage: com.example.demo.vo
+  configuration: 
+    logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+    
+#logging:
+#  level:
+#    com.example.demo.dao: debug
     
