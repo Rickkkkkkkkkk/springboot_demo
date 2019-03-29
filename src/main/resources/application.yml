@@ -18,6 +18,32 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+  redis:
+    database: 0  
+    host: 192.168.3.14
+    port: 6379
+    password: zzb
+    lettuce:
+      pool:
+        maxActive: 8
+        maxWait: -1
+        maxIdle: 8
+        minIdle: 0
+  rabbitmq:
+    host: 
+    port: 5672
+    username: 
+    password:
+dubbo:
+  application:
+    name: provider
+    server: true
+  registry:
+    address: zookeeper://192.168.3.14:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan: com.example.demo.service
     
 mybatis:
   mapperLocations: classpath:mybatis/*Mapper.xml
@@ -29,4 +55,8 @@ mybatis:
 #logging:
 #  level:
 #    com.example.demo.dao: debug
+
+#dubbo provider
+
+
     
