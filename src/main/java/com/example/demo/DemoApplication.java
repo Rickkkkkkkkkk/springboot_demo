@@ -17,7 +17,6 @@ import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 
 @SpringBootApplication
 @MapperScan("com.example.demo.dao")
-@EnableAspectJAutoProxy(exposeProxy = true)
 @EnableDubbo
 public class DemoApplication {
 
